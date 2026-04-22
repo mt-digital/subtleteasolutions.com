@@ -1,0 +1,495 @@
+/*-- scss:rules --*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Source+Code+Pro:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;350;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@200;300;400;500;600;700&display=swap");
+
+
+iframe {
+  max-width: 100%;
+  min-height: 200px;
+}
+
+div#quarto-content {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+main#quarto-document-content {
+  text-align: justify !important;
+  max-width: 65ch;
+  font-size: 18.5px !important;
+  /* // font-family: "Source Sans Pro"; */
+  font-family: "Inter";
+}
+
+/* Reduce list indentation slightly for narrower text columns */
+main ul,
+main ol {
+  padding-left: 1.2em;
+}
+
+main ul ul,
+main ol ol {
+  padding-left: 1.1em;
+}
+
+$title-bg: #4f7d9d;
+$title-bg: #4a789b;
+/* $title-fg: #fdfaf6; */
+/* $title-fg: #e6a8b1; */
+// $title-fg: #fff;
+$subtitle-fg: #e6a8b1;
+$subtitle-fg: #fdfaf6;
+
+.quarto-title {
+  background-color: $title-bg;
+  padding: 2rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+
+  h1.title {
+    color: $title-fg;
+    margin-top: 0;
+    text-align: left;
+    font-size: 2.25rem
+  }
+
+  p.subtitle {
+    color: $subtitle-fg;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    text-align: left;
+  }
+}
+
+
+// Color palette
+// $heading-color: #4f7d9d;
+$heading-color: #849972;
+
+
+div#index-subtitle {
+  color: $heading-color;
+  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: 0.06rem;
+  text-align: center;
+  font-family: "Source Serif 4";
+}
+
+.quarto-title-block .quarto-title-author {
+  flex: 1 1 auto;
+}
+
+.quarto-title-block .quarto-title-date {
+  flex: 0 0 auto;
+  margin-left: auto;
+  text-align: right;
+}
+
+.separator::before {
+  content: "•";
+  margin: 0 0.5rem;
+  color: #888;
+}
+
+
+body {
+  color: $body-color;
+  /* font-size: 18px !important; */
+}
+
+nav.quarto-secondary-nav {
+  background: white !important;
+}
+
+#quarto-header > nav.quarto-secondary-nav > div > nav > ol {
+  background-color: white !important;
+}
+
+
+/* -------------------------------------- */
+/* REMOVE DEFAULT QUARTO PAGE TITLE BLOCK */
+/* -------------------------------------- */
+.quarto-title-block {
+  display: none !important;
+}
+
+
+
+/* ============================================
+   HERO HEADER — Projeto Dourados (FINAL VERSION)
+   ============================================ */
+
+/* Highlight variable (unused but ready) */
+:root {
+  --highlight: #f7d45c;
+}
+
+/* Remove Quarto title block completely */
+.quarto-title-block {
+  display: none !important;
+}
+
+/* Responsive full hero container -------------------------------------- */
+.hero-header {
+  height: 250px;
+  min-height: unset;
+  max-height: unset;
+
+  background-image: url("imagens/image-photo-only-for-header.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 65% center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: relative;
+}
+
+/* Title + entrance animation ------------------------------------------ */
+div.hero-title {
+  font-size: 4.5rem;
+  /* color: #ffffff; */
+  // color: #FFEC58;
+  color: #fff;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  letter-spacing: 0.04em;
+  margin-top: 2.9rem;
+  margin-bottom: auto;
+  font-weight: 300 !important;
+}
+
+.hero-nav {
+  position: absolute;
+  bottom: 1.3rem;
+
+  width: 80%;                    /* <— spreads the nav items */
+  display: flex;
+  justify-content: space-between;/* <— evenly distributes them */
+  align-items: center;
+}
+
+
+.hero-nav a {
+  font-size: 1.75rem;
+  font-weight: 300 !important;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+
+  &:hover {
+    color: #FFEC58 !important; 
+    font-weight: 400 !important;
+  }
+
+}
+.hero-nav a.active {
+  color: #FFEC58 !important;
+  /* font-weight: 400 !important; */
+}
+
+
+/* PT nav */
+body.page-index   .nav-pt a[href="/pt/index.html"],
+body.page-oportunidades .nav-pt a[href="/pt/oportunidades.html"],
+body.page-pesquisa .nav-pt a[href="/pt/pesquisa.html"],
+
+/* EN nav */
+body.page-index   .nav-en a[href="/en/index.html"],
+body.page-oportunidades .nav-en a[href="/en/oportunidades.html"],
+body.page-pesquisa .nav-en a[href="/en/pesquisa.html"] {
+  font-weight: 600 !important;
+  color: #FFDF00;
+  border-bottom: 2px solid #FFDF00;
+}
+
+
+/* Mobile 2-column nav -------------------------------------------------- */
+@media (max-width: 600px) {
+  .hero-nav {
+    position: absolute;
+    bottom: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 0.8rem 1.2rem;
+    text-align: center;
+  }
+
+  .hero-nav a:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+/* Hide Quarto-generated navbar since we replaced it ------------------- */
+.navbar,
+.navbar-container,
+#quarto-header {
+  display: none !important;
+}
+
+/* Serious UNESCO-like typography for hero and headings */
+.hero-title,
+.hero-nav a,
+.hero-lang a,
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Source Serif Pro", serif !important;
+  font-weight: 200;
+}
+
+
+h2 {
+  border-bottom: 0.7px solid #dee2e6;
+  padding-bottom: .5rem;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $header-fg;
+  font-weight: 400;
+}
+// .hero-nav a {
+//   font-weight: 200 !important;
+// }
+.hero-title {
+  font-weight: 300 !important;
+  letter-spacing: 0.05em;
+}
+
+.sidebar nav .nav-link,
+.sidebar nav .nav-link .nav-link-text,
+.sidebar  > a,
+.sidebar  > a .nav-link-text,
+.quarto-sidebar .sidebar-item > .sidebar-link,
+.quarto-sidebar .sidebar-item > .sidebar-link .nav-link-text {
+  color: darkgrey;
+}
+
+/* Force active TOC link color in margin sidebar */
+.sidebar nav .nav-link.active,
+.sidebar nav .nav-link.active .nav-link-text,
+.sidebar .active > a,
+.sidebar .active > a .nav-link-text,
+.quarto-sidebar .sidebar-item .active > .sidebar-link,
+.quarto-sidebar .sidebar-item .active > .sidebar-link .nav-link-text {
+  color: #b9c3a8 !important;   /* lighter header color */
+  fill: #b9c3a8 !important;    /* some themes use SVG fills */
+}
+
+/* Also override Bootstrap's link-primary that Quarto often applies */
+.sidebar nav .nav-link.active.link-primary,
+.sidebar nav .nav-link.active.link-primary:hover {
+  color: #b9c3a8 !important;
+}
+
+/* Micro-scoped override: only the active item in the margin TOC */
+#quarto-margin-sidebar .nav-link.active {
+  --toc-active-color: #849972;   /* your lighter header color */
+  color: var(--toc-active-color) !important;
+}
+
+/* Keep hover consistent only for the active TOC entry */
+#quarto-margin-sidebar .nav-link.active:hover {
+  color: var(--toc-active-color) !important;
+}
+
+/* Hover state: active TOC link uses darker header color */
+#quarto-margin-sidebar .nav-link.active:hover {
+  color: #849972 !important;   /* darker header color */
+}
+
+/* Remove Quarto's blue bar and replace with subtle grey */
+#quarto-margin-sidebar .nav-link.active {
+  border-left: 0.5px solid #e5e5e5 !important;   /* subtle grey line */
+  padding-left: 0.6rem !important;               /* preserve spacing */
+}
+
+/* Mostra menu PT quando html.lang = pt-BR */
+html[lang="pt"] .nav-en { display: none; }
+html[lang="pt"] .nav-pt { display: flex; }
+
+/* Mostra menu EN quando html.lang = en-US */
+html[lang="en"] .nav-pt { display: none; }
+html[lang="en"] .nav-en { display: flex; }
+
+.hero-lang-switch {
+  margin-top: 0.0rem;
+  text-align: right;
+  font-size: 0.9rem;
+  font-weight: 300 !important;
+}
+
+.hero-lang-switch a {
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 400 !important;
+}
+
+.hero-lang-switch a:hover {
+  text-decoration: underline;
+}
+
+.hero-lang-switch .sep {
+  margin: 0 0.25rem;
+  color: #fff;
+}
+
+/* ------------------------------------------
+   LANGUAGE SWITCHER – DESKTOP (default)
+-------------------------------------------*/
+.hero-lang-switch {
+  position: absolute;
+  top: 20px;           /* ajustável */
+  right: 50px;         /* ajustável */
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #eee;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.hero-lang-switch a {
+  color: #eee;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero-lang-switch a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.hero-lang-switch .sep {
+  color: #eee;
+}
+
+
+/* ------------------------------------------
+   MOBILE SWITCHER – centered under title
+-------------------------------------------*/
+@media (max-width: 700px) {
+  .hero-header {
+    
+  }
+  .hero-lang-switch {
+    /* position: static; */
+    /* margin-top: 0.4rem; */
+    justify-content: center;
+    color: #eee;
+  }
+  h1 {
+    max-width: 80%;
+  }
+  p {
+    font-size: 16px; 
+  }
+}
+
+
+html[lang="pt"] .hero-lang-switch [data-lang="pt"],
+html[lang="en"] .hero-lang-switch [data-lang="en"] {
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+
+div.large-link {
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  a {
+    color: $heading-color !important;
+  }
+}
+
+
+/* ============================================
+   HERO FIX — MOBILE
+============================================ */
+
+@media (max-width: 700px) {
+
+  .hero-header {
+    height: auto;              /* critical */
+    padding: 1.2rem 1rem 1.6rem;
+    background-position: center;
+  }
+
+  div.hero-title {
+    font-size: 2.4rem;         /* down from 4.5rem */
+    margin-top: 0.5rem;
+    margin-bottom: 0.6rem;
+    text-align: center;
+    line-height: 1.1;
+  }
+
+  /* Stack nav naturally */
+  .hero-nav {
+    position: static;          /* removes overlap */
+    width: 100%;
+    margin-top: 0.6rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem 1rem;
+    text-align: center;
+  }
+    .hero-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Order elements */
+  .hero-title {
+    order: 1;
+  }
+
+  .hero-lang-switch {
+    order: 2;                 /* ⬆ moves above nav */
+    margin-top: 0.3rem;
+    margin-bottom: 0.6rem;
+    justify-content: center;
+    position: static;
+  }
+
+  .hero-nav {
+    order: 3;
+  }
+
+  .hero-nav a {
+    font-size: 1.1rem;         /* down from 1.75rem */
+  }
+
+  /* Center language switcher under title */
+  .hero-lang-switch {
+    position: static;
+    margin-top: 0.4rem;
+    justify-content: center;
+    font-size: 0.85rem;
+  }
+
+  html[lang="pt"] h1 { font-size: 18px; }
+  html[lang="en"] h1 { font-size: 22px; }
+  
+}
+
+.brand-header {
+  color: #3d5056;
+}
+.brand-subtitle {
+  color: #b0c7c4;
+}
+
+.float-right {
+  float: right;
+  margin-left: 3.0rem;
+  margin-right: 3.0em;
+  margin-top: 0.25rem;
+  margin-bottom: 1.5em;
+}

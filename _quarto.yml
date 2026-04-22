@@ -1,0 +1,18 @@
+project:
+  type: website
+
+website:
+  title: "SubtleTea Solutions"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+  favicon: sts-square-logo.png
+
+format:
+  html:
+    css: styles.scss
+
+
+
